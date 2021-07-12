@@ -8,7 +8,7 @@ from django.urls import reverse, reverse_lazy
 from django.views import generic
 from django.views.generic import CreateView
 
-from acountapp.models import BonBon
+from accountapp.models import BonBon
 
 
 def hello_world(request):
@@ -20,7 +20,7 @@ def hello_world(request):
            new_bonbon.text = temp
            new_bonbon.save()
 
-           return HttpResponseRedirect(reverse('acountapp:hello world'))
+           return HttpResponseRedirect(reverse('accountapp:hello world'))
     else:
            hello_world_list = BonBon.objects.all()
            return render(request,'accountapp/hello_world.html',
