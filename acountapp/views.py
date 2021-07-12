@@ -14,8 +14,11 @@ def hello_world(request):
            new_bonbon.text = temp
            new_bonbon.save()
 
+           hello_world_list = BonBon.objects.all()
+
            return render(request, 'accountapp/hello_world.html',
-                         context={'hello_world_output':new_bonbon})
+                         context={'hello_world_list':hello_world_list})
     else:
+           hello_world_list = BonBon.objects.all()
            return render(request,'accountapp/hello_world.html',
-                         context={'text':' POST METHOD!'})
+                         context={'hello_world_list':hello_world_list})
