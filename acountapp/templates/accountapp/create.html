@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <div class="text-center">
+       <div>
+           <h2>Create Account</h2>
+       </div>
+       <div> #form_class = UserCreationForm으로 이미 모양 다 만들어둔 상태임
+           <form action="{% url 'accountapp:create' %}" method="post">
+               {% csrf_token %}
+               {{ form }}
+               <input type="submit" class="btn btn-dark">
+           </form>
+       </div>
+    </div>
+
+
+{% endblock %}
