@@ -1,7 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+from django.urls import reverse
+
 from acountapp.models import BonBon
 
 
@@ -14,10 +16,7 @@ def hello_world(request):
            new_bonbon.text = temp
            new_bonbon.save()
 
-           hello_world_list = BonBon.objects.all()
-
-           return render(request, 'accountapp/hello_world.html',
-                         context={'hello_world_list':hello_world_list})
+           return HttpResponseRedirect(reverse('acountapp:hello world'))
     else:
            hello_world_list = BonBon.objects.all()
            return render(request,'accountapp/hello_world.html',
