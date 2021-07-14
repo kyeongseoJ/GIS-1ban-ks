@@ -15,3 +15,9 @@
 .BonBon_footer_button{
     margin: 1.5rem 0; font-family: 'Otomanopee One', sans-serif;
 }
+
+.mw-500{
+    max-width: 500px;
+    margin: 1rem 1.5rem;
+
+}

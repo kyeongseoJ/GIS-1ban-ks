@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
 
 
-    <div class="text-center">
+    <div class="text-center mw-500 m-auto">
        <div>
            <h4>Sign Up</h4>
        </div>
         <div class="m-5"> {#form_class = UserCreationForm으로 이미 모양 다 만들어둔 상태임#}
            <form action="{% url 'accountapp:create' %}" method="post">
                {% csrf_token %}
-               {{ form }}
-               <div class="m-4">
+               {% bootstrap_form form %}
+               <div class="m-5">
                    <input type="submit" class="btn btn-dark rounded-pill px-5">
                </div>
            </form>
