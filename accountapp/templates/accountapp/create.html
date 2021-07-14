@@ -5,13 +5,15 @@
 
     <div class="text-center">
        <div>
-           <h2>Create Account</h2>
+           <h4>Sign Up</h4>
        </div>
-       <div> #form_class = UserCreationForm으로 이미 모양 다 만들어둔 상태임
+        <div class="m-5"> {#form_class = UserCreationForm으로 이미 모양 다 만들어둔 상태임#}
            <form action="{% url 'accountapp:create' %}" method="post">
                {% csrf_token %}
                {{ form }}
-               <input type="submit" class="btn btn-dark">
+               <div class="m-4">
+                   <input type="submit" class="btn btn-dark rounded-pill px-5">
+               </div>
            </form>
        </div>
     </div>
