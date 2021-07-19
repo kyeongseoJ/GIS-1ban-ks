@@ -75,3 +75,8 @@ class AccountDeleteView(DeleteView):
            return super().get(request, *args, **kwargs)
         else:
             return HttpResponseRedirect(reverse('accountapp:login'))
+    def post(self, request, *args, **kwargs):
+         if request.user.is_authenticated:
+             return super().post(request, *args, **kwargs)
+         else:
+             return HttpResponseRedirect(reverse('accountapp:login'))
