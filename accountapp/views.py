@@ -47,6 +47,7 @@ class AccountDetailView(DetailView):
 
 has_ownership = [login_required, account_ownership_required]
 
+
 @method_decorator(has_ownership, 'get')
 @method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView):
