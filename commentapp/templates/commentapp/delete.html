@@ -9,7 +9,6 @@
        </div>
        <div>
            <form action="{% url 'commentapp:delete' pk=target_comment.pk %}"
-                 enctype="multipart/form-data"
                  method="post">
                {% csrf_token %}
                <div class="m-5">
