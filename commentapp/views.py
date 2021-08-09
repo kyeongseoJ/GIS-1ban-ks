@@ -15,3 +15,5 @@ class CommentCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('articleapp:detail', kwargs={'pk': self.object.article.pk})
+
+
