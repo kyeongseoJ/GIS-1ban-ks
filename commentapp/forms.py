@@ -7,3 +7,5 @@ class CommentCreationForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['content']
+
+
