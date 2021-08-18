@@ -12,8 +12,8 @@
         }
 
         .container div {
-          width: 45%;
-            max-width: 200px;
+          {#width: 45%;#}
+          {#  max-width: 200px;#}
           {#height: 500px;#}
           {#background-color: antiquewhite;#}
           display: flex;
@@ -21,11 +21,13 @@
           align-items: center;
           border-radius: 1rem;
             flex-direction: column;
-            box-shadow: 0 0 0.5rem darkorange;
+            {#box-shadow: 0 0 0.5rem darkorange;#}
         }
 
         div img {
-            width: 100%;
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover;
             border-radius: 1rem;
         }
 
@@ -43,7 +45,7 @@
                <a href="{%  url 'projectapp:detail' pk=project.pk %}">
                    <img src="{{ project.image.url }}" alt="">
                </a>
-               <span class="NNS_B m-2"> {{ project.name }}</span>
+               <span class="NNS_B m-2"> {{ project.name | truncatechars:10}}</span>
            </div>
 
        {% endfor %}

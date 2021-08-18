@@ -27,7 +27,6 @@ class ProjectDetailView(DetailView):
     template_name = 'projectapp/detail.html'
 
 
-
 class ProjectListView(ListView):
     model = Project
     context_object_name = 'project_list'
