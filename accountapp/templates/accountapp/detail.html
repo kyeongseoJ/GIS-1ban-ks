@@ -44,5 +44,9 @@
         {% endif %}
     </div>
 
+        <div>
+            {#카드형 레이아웃 넣어주기#}
+            {% include 'snippets/list_fragment.html' with article_list=object_list %}
+        </div>
 
 {% endblock %}
