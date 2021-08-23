@@ -38,9 +38,11 @@ class ProjectDetailView(DetailView, MultipleObjectMixin):
 
         subscription = Subscription.objects.filter(user=user,
                                                    project=project)
-
-        if subscription.exists():
-            subscription = 1
+        if user.is_authenticated:
+            subscription = Subscription.objects.filter(user=user,
+                                                       project=project)
+        # if subscription.exists(): 로그인 여부 때문에 오류남 위에거로 수정 
+        #     subscription = 1
         else:
             subscription = None
 
