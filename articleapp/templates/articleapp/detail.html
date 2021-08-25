@@ -7,12 +7,17 @@
         <div class="my-5">
             {# 제목/글쓴이/날짜 #}
             <h1 class = "NNS_B">{{ target_article.title }}</h1>
-            <div>
+            <div class="my-3">{#위아래 마진#}
                 <a href="{% url 'likeapp:article_like' article_pk=target_article.pk %}"
-                class="material-icons">
+                class="material-icons"
+                style="vertical-align: middle; color: #ff5263">{#하트와 숫자 위아래 정렬#}
                     favorite
                 </a>
-                {{ target_article.like }}
+                <span style="vertical-align: middle;">
+                     {#좋아요 갯수#}
+                     {{ target_article.like }}
+                </span>
+
             </div>
             <h4>{{ target_article.writer.profile.nickname }}</h4>
             <p>{{ target_article.created_at }}</p>

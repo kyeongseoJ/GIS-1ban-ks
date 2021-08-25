@@ -73,3 +73,25 @@
         font-size: 13px;
     }
 }
+
+/*앵커태그 꾸며줌*/
+a{
+    text-decoration: none;
+    color: black;
+    /*하트와 숫자 위아래 정렬=>디테일가서*/
+
+}
+
+/*하트 위로 커서 올렸을 때 파란색으로 변하는거 수정*/
+
+a:hover{
+    color: black;
+}
+
+
+
+
+
+
+
+
