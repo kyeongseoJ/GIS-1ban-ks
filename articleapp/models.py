@@ -13,7 +13,7 @@ class Article(models.Model):
                                related_name='article', null=True, blank=True)
 
     title = models.CharField(max_length=200, null=True)
-    image = models.ImageField(upload_to='article/', null=True, blank=True)
+    image = models.ImageField(upload_to='article/', null=True)
     content = models.TextField(null=True)
 
     created_at = models.DateField(auto_now_add=True)
