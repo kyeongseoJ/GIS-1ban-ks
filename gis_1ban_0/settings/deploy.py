@@ -1,6 +1,7 @@
 from .base import *
 
 env_list = dict()
+
 local_env = open(os.path.join(BASE_DIR,'.env'))
 
 while True:
@@ -32,7 +33,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
         'USER': 'django',
-        'PASSWORD': 'mypassword1234',
+        'PASSWORD': 'password1234',
         'HOST': 'mariadb',
         'PORT': '3306',
     }
