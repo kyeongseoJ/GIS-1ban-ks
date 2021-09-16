@@ -17,7 +17,7 @@ services:
       - gis_1ban_0_network
     volumes:
     - gis_1ban_0_static:/home/GIS-1ban-ks/staticfiles/
-    - :/home/GIS-1ban-ks/media/
+    - gis_1ban_0_media:/home/GIS-1ban-ks/media/
 
 networks: #네트워크 생성
   gis_1ban_0_network:
