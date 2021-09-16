@@ -26,8 +26,8 @@ services:
     volumes:
       - gis_mariadb:/var/lib/mysql
     environment:
-      MARIADB_PASSWORD: dummy1234
-      MARIADB_ROOT_PASSWORD: dummy1234
+      MARIADB_PASSWORD: password1234
+      MARIADB_ROOT_PASSWORD: password1234
       MARIADB_DATABASE: django
       MARIADB_USER: django
 
