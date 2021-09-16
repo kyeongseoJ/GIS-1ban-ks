@@ -6,13 +6,13 @@ services:
       - gis_1ban_0_network
     volumes:
     - gis_1ban_0_static:/data/static/
-    - gis_1ban_0_media:/data/media
+    - gis_1ban_0_media:/data/media/
     - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
     ports:
     - 80:80
 
   django:
-    image: gis_1ban_0_django:3
+    image: gis_1ban_0_django:4
     networks:
       - gis_1ban_0_network
     volumes:
@@ -38,3 +38,4 @@ networks: #네트워크 생성
 volumes:  # 볼륨생성
   gis_1ban_0_static:
   gis_1ban_0_media:
+  gis_mariadb:
