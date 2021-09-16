@@ -19,6 +19,19 @@ services:
     - gis_1ban_0_static:/home/GIS-1ban-ks/staticfiles/
     - gis_1ban_0_media:/home/GIS-1ban-ks/media/
 
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - gis_1ban_0_network
+    volumes:
+      - gis_mariadb:/var/lib/mysql
+    environment:
+      MARIADB_PASSWORD: dummy1234
+      MARIADB_ROOT_PASSWORD: dummy1234
+      MARIADB_DATABASE: django
+      MARIADB_USER: django
+
+
 networks: #네트워크 생성
   gis_1ban_0_network:
 
