@@ -14,7 +14,7 @@ def read_secrets(secret_name):
     
 # SECURITY WARNING: keep the secret key used in production secret!
 # .yml파일에서 가져오는 시크릿 키 사용
-SECRET_KEY =read_secrets('DJANGO_SECRET_KEY')
+SECRET_KEY = read_secrets('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
