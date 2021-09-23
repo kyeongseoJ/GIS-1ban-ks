@@ -12,7 +12,7 @@ services:
     - 80:80
 
   django:
-    image: gis_1ban_0_django:4
+    image: gis_1ban_0_django:5
     networks:
       - gis_1ban_0_network
     secrets:
@@ -33,11 +33,11 @@ services:
       - MARIADB_USER
       - MARIADB_PASSWORD
       - MARIADB_ROOT_PASSWORD
-    environment:
-      MARIADB_PASSWORD: password1234
-      MARIADB_ROOT_PASSWORD: password1234
+    environment: # 환경변수 보안키 노출된 상태, 값을 경로로 변경 
       MARIADB_DATABASE: django
-      MARIADB_USER: django
+      MARIADB_USER_FILE: /run/secrets/MARIADB_USER
+      MARIADB_PASSWORD_FILE: /run/secrets/MARIADB_PASSWORD
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/MARIADB_ROOT_PASSWORD
 
 
 networks: # 네트워크 생성 선언
