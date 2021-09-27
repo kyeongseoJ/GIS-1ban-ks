@@ -33,7 +33,7 @@ services:
       - MARIADB_USER
       - MARIADB_PASSWORD
       - MARIADB_ROOT_PASSWORD
-    environment: # 환경변수 보안키 노출된 상태, 값을 경로로 변경 
+    environment: # 환경변수 보안키 노출된 상태, 값을 경로로 변경
       MARIADB_DATABASE: django
       MARIADB_USER_FILE: /run/secrets/MARIADB_USER
       MARIADB_PASSWORD_FILE: /run/secrets/MARIADB_PASSWORD
