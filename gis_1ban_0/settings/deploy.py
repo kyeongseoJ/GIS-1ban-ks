@@ -5,6 +5,7 @@ from .base import *
 # 보안 정보를 읽어오는 함수 설정
 # 경로 알기 위해서 포테이너 마리아디비 커넥트해서 확인할 수 있다. 혹은 공식문서 참고
 
+
 def read_secrets(secret_name):
     file = open('/run/secrets/'+ secret_name)
     secret = file.read()
