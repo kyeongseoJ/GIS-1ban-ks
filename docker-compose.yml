@@ -10,10 +10,12 @@ services:
     - gis_log:/var/log/nginx/
     - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
     ports:
-    - mode: host
-      protocol: tcp
-      target: 80
-      published: 80
+      - mode: host
+        target: 80
+        published: 80
+        protocol: tcp
+    secrets:
+      - NGINX_PASSWORD
 
   goaccess:
     image: allinurl/goaccess:1.5.1
@@ -71,6 +73,8 @@ secrets: # 보안키 생성 선언
   MARIADB_ROOT_PASSWORD:
     external: true
   DJANGO_SECRET_KEY:
+    external: true
+  NGINX_PASSWORD:
     external: true
 
 
