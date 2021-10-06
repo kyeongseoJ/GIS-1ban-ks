@@ -12,8 +12,8 @@ services:
     ports:
     - mode: host
       protocol: tcp
-      target: 80 # host에 연결할 포트
-      published: 80 # 컨테이너에서 열어줄 포트
+      target: 80
+      published: 80
 
   goaccess:
     image: allinurl/goaccess:1.5.1
