@@ -10,7 +10,10 @@ services:
     - gis_log:/var/log/nginx/
     - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
     ports:
-    - 80:80
+    - mode: host
+      protocol: tcp
+      target: 80 # host에 연결할 포트
+      published: 80 # 컨테이너에서 열어줄 포트
 
   goaccess:
     image: allinurl/goaccess:1.5.1
