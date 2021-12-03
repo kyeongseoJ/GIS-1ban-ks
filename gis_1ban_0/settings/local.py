@@ -11,7 +11,7 @@ while True:
     start = line.find('=')
     key = line[:start]
     value = line[start+1:]
-    env_list[key] =value
+    env_list[key] = value
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
